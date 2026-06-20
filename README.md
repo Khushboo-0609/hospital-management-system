@@ -44,10 +44,11 @@ The system allows users to register patients through an input form and view all 
 
 **📊 Output Pages**
 
-📝 Register Page: Patient form for adding new patient.
+**📝 Register Page:** Patient form for adding new patient.
 
-📄 View Page: Shows all registered patients and total count.
+**📄 View Page:** Shows all registered patients and total count.
 
 **👨‍💻 Author
+
 Name:Khushboo**
 
