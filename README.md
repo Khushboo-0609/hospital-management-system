@@ -48,7 +48,7 @@ The system allows users to register patients through an input form and view all 
 
 **📄 View Page:** Shows all registered patients and total count.
 
-**👨‍💻 Author
+**👨‍💻 Author**
 
-Name:Khushboo**
+Khushboo
 
