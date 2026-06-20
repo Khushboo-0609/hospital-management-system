@@ -1,0 +1,35 @@
+body{
+    font-family: Arial;
+    background:skyblue;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+}
+
+form{
+    width:400px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+input{
+    width:100%;
+    padding:8px;
+    margin:10px 0;
+}
+
+button{
+    width:100%;
+    padding:10px;
+}
+
+a{
+    display:block;
+    text-align:center;
+    margin-top:15px;
+}

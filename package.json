@@ -1,0 +1,11 @@
+{
+  "name": "hospital-management-system",
+  "version": "1.0.0",
+  "description": "Hospital Management Mini Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Khushboo",
+  "license": "ISC"
+}
