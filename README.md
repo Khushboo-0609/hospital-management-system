@@ -10,43 +10,44 @@ The system allows users to register patients through an input form and view all 
 
 **🚀 Features**
 
-🧾 Patient Registration Form
+1. Patient Registration Form.
 
-👤 Add patient details (Name, Age, Date of Admission, Illness)
+2. Add patient details (Name, Age, Date of Admission, Illness).
 
-📋 View all registered patients
+3. View all registered patients.
 
-🔢 Display total number of registered patients
+4. Display total number of registered patients.
 
-⚡ Simple and user-friendly interface
+5. Simple and user-friendly interface.
 
 **🛠️ Tech Stack**
 
-HTML (Structure)
+1.HTML (Structure)
 
-CSS (Styling)
+2.CSS (Styling)
 
-JavaScript (Frontend Logic)
+3.JavaScript (Frontend Logic)
 
-Node.js (Backend Server)
+4.Node.js (Backend Server)
 
 **🧾 How It Works**
 
-User fills the registration form (Name, Age, Date)
+1.User fills the registration form (Name, Age, Date).
 
-Data is sent to Node.js server
+2.Data is sent to Node.js server.
 
-Server stores patient information
+3.Server stores patient information.
 
-View page displays all registered patients
+4.View page displays all registered patients.
 
-Total patient count is also shown
+5.Total patient count is also shown
 
 **📊 Output Pages**
 
-📝 Register Page: Patient form for adding new patient
+📝 Register Page: Patient form for adding new patient.
 
-📄 View Page: Shows all registered patients and total count
+📄 View Page: Shows all registered patients and total count.
 
 **👨‍💻 Author
 Name:Khushboo**
+
