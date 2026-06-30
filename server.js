@@ -1,8 +1,30 @@
 const http = require("http");
 const fs = require("fs");
 const url = require("url");
+const { MongoClient } = require("mongodb");
 
-const server = http.createServer((req, res) => {
+// MongoDB Connection
+const mongoUrl = "mongodb+srv://id_db_user:password@cluster0.zhb8wd6.mongodb.net/student?retryWrites=true&w=majority&appName=Cluster0";
+const client = new MongoClient(mongoUrl);
+
+let patientsCollection;
+
+async function connectDB() {
+    try {
+        await client.connect();
+        console.log("MongoDB Connected");
+
+        const db = client.db("student");
+        patientsCollection = db.collection("patients");
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+connectDB();
+
+// Create Server
+const server = http.createServer(async (req, res) => {
 
     if (req.url === "/") {
 
@@ -20,38 +42,36 @@ const server = http.createServer((req, res) => {
             res.end(data);
         });
 
-    } else if (req.url === "/style.css") {
-    fs.readFile("style.css", (err, data) => {
-        res.writeHead(200, {
-            "Content-Type": "text/css"
+    }
+
+    else if (req.url === "/style.css") {
+
+        fs.readFile("style.css", (err, data) => {
+            if (err) {
+                res.writeHead(404);
+                res.end("CSS File Not Found");
+                return;
+            }
+
+            res.writeHead(200, {
+                "Content-Type": "text/css"
+            });
+
+            res.end(data);
         });
-        res.end(data);
-    });
-}
+
+    }
+
     else if (req.url.startsWith("/register")) {
 
         const query = url.parse(req.url, true).query;
 
-        let patients = [];
-
-        try {
-            patients = JSON.parse(
-                fs.readFileSync("patients.json", "utf8")
-            );
-        } catch {
-            patients = [];
-        }
-
-        patients.push({
+        await patientsCollection.insertOne({
             name: query.name,
+            age: query.age,
             disease: query.disease,
             admitDate: query.date
         });
-
-        fs.writeFileSync(
-            "patients.json",
-            JSON.stringify(patients, null, 2)
-        );
 
         res.writeHead(200, {
             "Content-Type": "text/html"
@@ -61,32 +81,34 @@ const server = http.createServer((req, res) => {
             <h2>Patient Registered Successfully</h2>
             <a href="/">Go Back</a>
             <br><br>
-            <a href="/view">View Patients</a>
+            <a href="/view">View All Patients</a>
         `);
 
-    } else if (req.url === "/view") {
+    }
 
-        let patients = [];
+    else if (req.url === "/view") {
 
-        try {
-            patients = JSON.parse(
-                fs.readFileSync("patients.json", "utf8")
-            );
-        } catch {
-            patients = [];
-        }
+        const patients = await patientsCollection.find().toArray();
 
         res.writeHead(200, {
             "Content-Type": "text/html"
         });
 
-        let output = "<h1>Patient Records</h1>";
+        let output = `
+        <html>
+        <head>
+            <title>Patient Records</title>
+        </head>
+        <body>
+            <h1>Patient Records</h1>
+        `;
 
         patients.forEach((p, index) => {
             output += `
                 <p>
                     <b>Patient ${index + 1}</b><br>
                     Name: ${p.name}<br>
+                    Age: ${p.age}<br>
                     Disease: ${p.disease}<br>
                     Admit Date: ${p.admitDate}
                 </p>
@@ -94,14 +116,38 @@ const server = http.createServer((req, res) => {
             `;
         });
 
-        output += `<a href="/">Back to Form</a>`;
+        output += `
+            <a href="/">Back to Form</a>
+        </body>
+        </html>
+        `;
 
         res.end(output);
 
-    } else {
+    }
+    else if (req.url === "/images.jpeg") {
+    fs.readFile("images.jpeg", (err, data) => {
+        res.writeHead(200, {
+            "Content-Type": "image/jpeg"
+        });
+        res.end(data);
+    });
+}
+else if (req.url === "/images2.jpeg") {
+    fs.readFile("images2.jpeg", (err, data) => {
+        res.writeHead(200, {
+            "Content-Type": "image/jpeg"
+        });
+        res.end(data);
+    });
+}
+    else {
+
         res.writeHead(404);
         res.end("Page Not Found");
+
     }
+
 });
 
 server.listen(3000, () => {
