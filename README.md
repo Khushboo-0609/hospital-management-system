@@ -20,6 +20,8 @@ The system allows users to register patients through an input form and view all 
 
 5. Simple and user-friendly interface.
 
+6. Mongodb Integration. 
+
 **🛠️ Tech Stack**
 
 1.HTML (Structure)
@@ -29,6 +31,8 @@ The system allows users to register patients through an input form and view all 
 3.JavaScript (Frontend Logic)
 
 4.Node.js (Backend Server)
+
+5.Database Mongodb
 
 **🧾 How It Works**
 
