@@ -32,14 +32,17 @@ After submitting the form, the entered data is sent to the Node.js server, where
 **
 **🛠 Tech Stack**
 
-**Technology                                                                  Purpose**
-HTML                                                            Structure of the website
-CSS                                                             Styling and responsive design
-JavaScript                                                      Client-side functionality
-Node.js                                                         Backend server
-MongoDB                                                         Database for storing patient records
+**Technology**
 
----
+HTML
+
+CSS
+
+JavaScript
+
+Node.js
+
+MongoDB
 
 
 **⚙️ How It Works**
@@ -47,31 +50,40 @@ MongoDB                                                         Database for sto
 User Opens Website
         │
         ▼
+        
 Patient Registration Form
         │
         ▼
+        
 Enter Patient Details
 (Name, Age, Date of Admission, Illness)
         │
         ▼
+        
 Click Register
         │
         ▼
+        
 Data Sent to Node.js Server
         │
         ▼
+        
 Node.js Validates the Data
         │
         ▼
+        
 Store Data in MongoDB
         │
         ▼
+        
 Retrieve Data from Database
         │
         ▼
+        
 Registered Patients Page
         │
         ▼
+        
 Display Total Registered Patients
 
 ---
@@ -93,16 +105,16 @@ Display Total Registered Patients
 Hospital-Management-System/
 
 │── public/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-│
+├── index.html
+├── style.css
+└── script.js
+
 │── server.js
 │── package.json
 │── database/
 │── README.md
 
----
+
 
 **🚀 Future Enhancements**
 
