@@ -41,6 +41,15 @@ Node.js (HTTP Module)
 
 JSON (Local Data Storage)
 
+**🌐 Live Demo**
+
+You can access the live Hospital Management System using the link below:
+
+**Live Website:** 
+https://hospital-management-system-kqor.onrender.com
+
+
+
 
 **📂 Project Structure**
 
