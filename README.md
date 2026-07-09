@@ -1,140 +1,145 @@
 **🏥 Hospital Management System**
 
-**«A simple, responsive, and user-friendly Hospital Management System developed using HTML, CSS, JavaScript, Node.js, and MongoDB. This project helps manage patient records by allowing users to register patients, store their information securely in a MongoDB database, and display all registered patients through an interactive web interface.»**
+**📌 Project Description**
 
-**📖 Description:**
-
-The Hospital Management System is a full-stack web application designed to simplify patient registration and record management. 
-Users can fill out a patient registration form by entering details such as Name, Age, Date of Admission, and Illness.
-
-After submitting the form, the entered data is sent to the Node.js server, where it is processed and securely stored in the MongoDB database. The application then retrieves the stored records and displays them on the Registered Patients page. It also shows the total number of registered patients, making it easy to monitor and manage patient information through a clean and user-friendly interface.
-
-
+The Hospital Management System is a simple web-based application developed using HTML, CSS, JavaScript, and Node.js (HTTP Module). It helps manage patient registration and records through an easy-to-use interface. Patient details are stored in a local JSON file, making the project lightweight and suitable for learning backend development without using a database.
 
 **✨ Features**
 
-- 📝 Patient Registration Form
+- Patient Registration Form
   
-- 👤 Add patient details (Name, Age, Date of Admission, Illness)
+- Add Patient Name, Age, Gender, Phone Number, Disease, and Admit Date
   
-- 💾 Store patient information securely in MongoDB
+- Confirmation message before registration
   
-- 📋 View all registered patients
+- View all registered patients
+  
+- Patient records displayed in attractive card format
+  
+- Search patients by name
+  
+- Filter patients by disease
+  
+- Filter patients by admit date
+  
+- Delete patient records
+  
+- Responsive and modern user interface
+  
+- Background images and professional styling
+  
+
+🛠️ Tech Stack
+
+HTML5
+  
+CSS3
  
-- 📊 Display total registered patient
+JavaScript (ES6)
 
-- ⚡ Fast backend with Node.js
-  
-- 🎨 Simple and responsive user interface
- 
-- 🔄 Retrieve patient data directly from the database
+Node.js (HTTP Module)
 
-**
-**🛠 Tech Stack**
-
-**Technology**
-
-HTML
-
-CSS
-
-JavaScript
-
-Node.js
-
-MongoDB
-
-
-**⚙️ How It Works**
-
-User Opens Website
-        │
-        ▼
-        
-Patient Registration Form
-        │
-        ▼
-        
-Enter Patient Details
-(Name, Age, Date of Admission, Illness)
-        │
-        ▼
-        
-Click Register
-        │
-        ▼
-        
-Data Sent to Node.js Server
-        │
-        ▼
-        
-Node.js Validates the Data
-        │
-        ▼
-        
-Store Data in MongoDB
-        │
-        ▼
-        
-Retrieve Data from Database
-        │
-        ▼
-        
-Registered Patients Page
-        │
-        ▼
-        
-Display Total Registered Patients
-
----
-
-**📸 Output Pages**
-
-- 📝 Patient Registration Page
-  
-- 👨‍⚕️ Registered Patients Page
-  
-- 📊 Total Registered Patients Dashboard
-  
-- 💾 MongoDB Database (Stores Patient Records)
-
+JSON (Local Data Storage)
 
 
 **📂 Project Structure**
 
-Hospital-Management-System/
-
-│── public/
-├── index.html
-├── style.css
-└── script.js
-
-│── server.js
-│── package.json
-│── database/
-│── README.md
+**"index.html"** – Patient registration form
+  
+**"style.css"** – User interface styling
+  
+**"server.js"** – Backend server and routing
+  
+**"patients.json**" – Stores patient records
 
 
+**⚙️ How It Works**
+
+1. Open the application in your browser.
+   
+2. Fill in the patient details.
+ 
+3. Click Register Patient to save the information.
+ 
+4. View all registered patients from the View Patients page.
+ 
+5. Search or filter patient records as needed.
+ 
+6. Delete records when they are no longer required.
+
+
+ **📸 Output Pages**
+
+**🏠 Home Page**
+
+- Displays the Hospital Management System title.
+  
+- Shows the patient registration form.
+  
+- Includes fields for Patient Name, Age, Gender, Phone Number, Disease, and Admit Date.
+  
+- Provides a Register Patient button and a View Patients button.
+  
+
+**✅ Registration Success Page**
+
+- Displays a confirmation message after successful patient registration.
+  
+- Allows users to register another patient.
+  
+- Provides a link to view all registered patients.
+  
+
+**👥 View Patients P**age
+
+- Displays all registered patients in attractive card format.
+  
+- Shows patient details including Name, Age, Gender, Phone Number, Disease, and Admit Date.
+  
+- Displays the total number of registered patients.
+  
+- Includes a Delete Patient button for each patient.
+  
+
+**🔍 Search & Filter Pag**e
+
+- Search patients by name.
+  
+- Filter patient records by disease.
+  
+- Filter patient records by admit date.
+  
+- Displays matching patient records instantly.
+  
+
+**❌ 404 Error Pag**e
+
+- Displays a custom 404 – Page Not Found message when an invalid URL is accessed.
+  
+- Includes a link to return to the Home Page.
 
 **🚀 Future Enhancements**
 
-- ✏️ Update patient details
+- Admin Login Authentication
   
-- ❌ Delete patient records
- 
-- 🔍 Search patient by name
+- MongoDB Database Integration
   
-- 📅 Appointment management
+- Edit and Update Patient Records
   
-- 👨‍⚕️ Doctor management
+- Doctor and Appointment Management
   
-- 🔐 User Authentication
- 
-- 📄 Medical history management
+- Patient ID Generation
   
-**📌 Conclusion**
+- Export Patient Records to PDF or Excel
+  
+- Email and SMS Notifications
+  
+- Dashboard with Statistics
+  
 
-This Hospital Management System demonstrates the integration of HTML, CSS, JavaScript, Node.js, and MongoDB to build a complete full-stack web application. It provides an efficient way to register patients, store their information securely, retrieve records from the database, and display the total number of registered patients through a simple, clean, and user-friendly interface.
+**🎯 Learning Outcomes**
+
+This project demonstrates the basics of frontend and backend integration using Node.js, file handling with JSON, routing, form processing, data management, and responsive web design.
 
 **👨‍💻 Author**
 
