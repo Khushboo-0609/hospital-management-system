@@ -429,3 +429,17 @@ width:100%;
 }
 
 }
+footer{
+    margin-top:40px;
+    background:#1f3c88;
+    color:white;
+    text-align:center;
+    padding:15px;
+    font-size:15px;
+    border-top:3px solid #4caf50;
+}
+
+footer p{
+    margin:0;
+}
+
